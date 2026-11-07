@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "OCO",
+    "O O"
+  ],
+  "key": {
+    "O": "minecraft:crying_obsidian",
+    "C": "riftbound:rift_core"
+  },
+  "result": { "id": "riftbound:rift_helmet", "count": 1 }
+}

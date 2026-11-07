@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "riftbound:rift"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "riftbound:rift"
+      }
+    ]
+  }
+}

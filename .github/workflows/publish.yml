@@ -1,0 +1,36 @@
+name: Publish to Modrinth
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodlari Cek
+        uses: actions/checkout@v4
+
+      - name: Java 21 Kurulumu
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Gradle ile Derle
+        run: |
+          chmod +x gradlew
+          ./gradlew build
+
+      - name: Modrinth'e Yukle
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: riftbound-nyrox_tr
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          files: build/libs/!(*-dev|*-sources).jar
+          name: ${{ github.event.release.name }}
+          version: ${{ github.event.release.tag_name }}
+          version-type: release
+          changelog: ${{ github.event.release.body }}
+          loaders: fabric
+          game-versions: 1.21.4

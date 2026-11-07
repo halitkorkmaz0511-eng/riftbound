@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  C",
+    " R ",
+    " R "
+  ],
+  "key": {
+    "C": "riftbound:rift_core",
+    "R": "minecraft:end_rod"
+  },
+  "result": { "id": "riftbound:rift_staff", "count": 1 }
+}

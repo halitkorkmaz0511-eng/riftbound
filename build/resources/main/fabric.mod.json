@@ -1,0 +1,27 @@
+﻿{
+    "schemaVersion":  1,
+    "id":  "riftbound",
+    "version":  "1.0.0",
+    "name":  "RIFTBOUND",
+    "description":  "Dark-fantasy dimensional bosses, synchronized animations, and unlockable rift combat abilities.",
+    "authors":  [
+                    "Riftbound Team"
+                ],
+    "license":  "MIT",
+    "environment":  "*",
+    "entrypoints":  {
+                        "main":  [
+                                     "com.riftbound.RiftboundMod"
+                                 ],
+                        "client":  [
+                                       "com.riftbound.RiftboundClient",
+                                       "com.riftbound.client.RiftboundClient"
+                                   ]
+                    },
+    "depends":  {
+                    "fabricloader":  ">=0.16.10",
+                    "minecraft":  "~1.21.4",
+                    "java":  ">=21",
+                    "fabric-api":  "*"
+                }
+}
