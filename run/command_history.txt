@@ -1,0 +1,3 @@
+/riftbound_test event riftbound:chronophobia
+/riftbound_test event riftbound:doppelganger
+/riftbound_test event riftbound:spatial_distortion
