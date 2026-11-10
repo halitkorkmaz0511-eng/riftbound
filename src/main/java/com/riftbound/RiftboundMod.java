@@ -16,6 +16,7 @@ public class RiftboundMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        com.riftbound.horror.GuideBookManager.register();
         com.riftbound.horror.HorrorDirector.init();
         net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
             handler.player.sendSystemMessage(net.minecraft.network.chat.Component.literal("\u00A7d[Riftbound] \u00A7bMod rehberini acmak icin Z tusuna basiniz."));
